@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import {
   Box,
@@ -16,9 +16,11 @@ import {
   FormControl,
 } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
-const SignIn = () => {
+const SignIn: React.FC = () => {
   const [showPassword, setShowPassword] = React.useState(false);
+  const navigate = useNavigate();
 
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
@@ -67,7 +69,14 @@ const SignIn = () => {
             padding: "25px",
           }}
         >
-          <Typography component="h1" variant="h5" textAlign="center">
+          <Typography
+            component="h1"
+            variant="h5"
+            textAlign="center"
+            sx={{
+              fontSize: { xs: "1.5rem", sm: "2rem" },
+            }}
+          >
             Sign in
           </Typography>
           <Box
@@ -137,12 +146,13 @@ const SignIn = () => {
               label="Remember me"
             />
             <Link
-              href="#"
+              onClick={() => navigate("/forgot-password")}
               variant="body2"
               sx={{
                 color: "#333333",
                 textDecorationColor: "#333333",
                 textUnderlineOffset: "8px",
+                cursor: "pointer",
               }}
             >
               Forgot Password?
