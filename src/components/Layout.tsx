@@ -3,13 +3,15 @@ import { useNavigate, useLocation } from "react-router-dom";
 import {
   Box,
   Typography,
-  Link,
   List,
   ListItemText,
-  Divider,
   ListItemButton,
   ListItemIcon,
   Avatar,
+  Stack,
+  InputBase,
+  Badge,
+  IconButton,
 } from "@mui/material";
 import {
   Dashboard as DashboardIcon,
@@ -20,6 +22,10 @@ import {
   CalendarToday as CalendarTodayIcon,
   Settings as SettingsIcon,
   ExitToApp as ExitToAppIcon,
+  Search as SearchIcon,
+  Notifications as NotificationsIcon,
+  ChatBubble as ChatBubbleIcon,
+  ExpandMore as ExpandMoreIcon,
 } from "@mui/icons-material";
 
 interface ILayout {
@@ -60,7 +66,7 @@ const Layout: React.FC<ILayout> = ({ children }) => {
           <img
             src="/academate-logo.png"
             alt="academate-logo"
-            width={100}
+            width={123}
             style={{ marginBottom: "20px" }}
           />
           <List>
@@ -181,34 +187,61 @@ const Layout: React.FC<ILayout> = ({ children }) => {
           }}
         >
           <Box>
-            <Typography variant="h6">Welcome, Boran</Typography>
-            <Link
-              href="#"
-              onClick={() => navigate("/profile")}
-              sx={{ display: "block", mt: 1 }}
-            >
-              Lecturer &gt; TIPLR Education Pvt. Ltd.
-            </Link>
+            <Typography variant="h6">Welcome Boran</Typography>
+            <Stack direction="row" spacing={1}>
+              <Typography color="primary">Lecturer</Typography>
+              <Typography>&gt;</Typography>
+              <Typography>TIPLR Education Pvt. Ltd.</Typography>
+            </Stack>
           </Box>
-          <Box display="flex" alignItems="center">
-            <input
-              type="text"
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              bgcolor: "#f5f6f7",
+              borderRadius: "8px",
+              padding: "8px 16px",
+              width: "400px",
+              height: "62px",
+            }}
+          >
+            <SearchIcon sx={{ color: "#888" }} />
+            <InputBase
               placeholder="Search Dashboard"
-              style={{
-                padding: "8px",
-                borderRadius: "24px",
-                border: "1px solid #ddd",
-                marginRight: "16px",
+              sx={{
+                marginLeft: "12px",
+                flex: 1,
+                color: "#333",
+                "::placeholder": {
+                  color: "#888",
+                },
               }}
             />
-            <Avatar
-              alt="Boran Pol"
-              src="/path-to-avatar.jpg"
-              sx={{ marginRight: 2 }}
-            />
-            <Box>
-              <Typography variant="body1">Boran Pol</Typography>
-              <Typography variant="body2">boranpol@mail.com</Typography>
+          </Box>
+          <Box display="flex" alignItems="center" gap={2}>
+            <Stack direction="row" spacing={1}>
+              <IconButton>
+                <Badge color="primary" variant="dot">
+                  <NotificationsIcon />
+                </Badge>
+              </IconButton>
+              <IconButton>
+                <ChatBubbleIcon />
+              </IconButton>
+            </Stack>
+            <Box display="flex" alignItems="center">
+              <Avatar
+                alt="Boran Pol"
+                src="https://images.unsplash.com/photo-1532074205216-d0e1f4b87368?q=80&w=1941&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                sx={{ marginRight: 2 }}
+              />
+              <Box>
+                <Typography variant="body1">Boran Pol</Typography>
+                <Typography variant="body2">boranpol@mail.com</Typography>
+              </Box>
+              <IconButton>
+                <ExpandMoreIcon />
+              </IconButton>
             </Box>
           </Box>
         </Box>
