@@ -23,10 +23,10 @@ import {
   Settings as SettingsIcon,
   ExitToApp as ExitToAppIcon,
   Search as SearchIcon,
-  Notifications as NotificationsIcon,
-  ChatBubble as ChatBubbleIcon,
   ExpandMore as ExpandMoreIcon,
 } from "@mui/icons-material";
+
+import { HiOutlineBell, HiOutlineChatBubbleOvalLeft } from "react-icons/hi2";
 
 interface ILayout {
   children: React.ReactNode;
@@ -59,7 +59,8 @@ const Layout: React.FC<ILayout> = ({ children }) => {
           flexDirection: "column",
           justifyContent: "space-between",
           p: 2,
-          boxShadow: "0 0 20px rgba(59, 178, 217, 0.25)",
+          position: "fixed",
+          height: "100%",
         }}
       >
         <Box>
@@ -173,6 +174,7 @@ const Layout: React.FC<ILayout> = ({ children }) => {
           flexDirection: "column",
           bgcolor: "#ebf7fb",
           overflowY: "auto",
+          marginLeft: "250px", // To account for the fixed sidebar
         }}
       >
         {/* Top Navbar */}
@@ -222,11 +224,11 @@ const Layout: React.FC<ILayout> = ({ children }) => {
             <Stack direction="row" spacing={1}>
               <IconButton>
                 <Badge color="primary" variant="dot">
-                  <NotificationsIcon />
+                  <HiOutlineBell className="w-6 h-6" />
                 </Badge>
               </IconButton>
               <IconButton>
-                <ChatBubbleIcon />
+                <HiOutlineChatBubbleOvalLeft className="w-6 h-6" />
               </IconButton>
             </Stack>
             <Box display="flex" alignItems="center">

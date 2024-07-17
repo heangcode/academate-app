@@ -53,7 +53,7 @@ const Dashboard: React.FC = () => {
             size="large"
             startIcon={<AddIcon />}
           >
-            Create Classroom
+            Create Generation
           </Button>
         </Box>
       </Box>
