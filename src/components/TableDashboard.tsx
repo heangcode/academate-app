@@ -1,3 +1,4 @@
+// src/components/TableDashboard.tsx
 import React from "react";
 import {
   Table,
@@ -13,8 +14,15 @@ import {
 } from "@mui/material";
 import { Phone as PhoneIcon, Email as EmailIcon } from "@mui/icons-material";
 import { TableDashboardData } from "../data/TableDashboardData";
+import { useNavigate } from "react-router-dom";
 
 const TableDashboard: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleRowClick = (id: number) => {
+    navigate(`/student-profile/${id}`);
+  };
+
   return (
     <TableContainer component={Paper} sx={{ mt: 3 }}>
       <Table>
@@ -29,7 +37,11 @@ const TableDashboard: React.FC = () => {
         </TableHead>
         <TableBody>
           {TableDashboardData.map((student, index) => (
-            <TableRow key={index}>
+            <TableRow
+              key={index}
+              onClick={() => handleRowClick(student.id)}
+              style={{ cursor: "pointer" }}
+            >
               <TableCell>
                 <Box display="flex" alignItems="center">
                   <Avatar src={student.avatar} sx={{ mr: 2 }} />

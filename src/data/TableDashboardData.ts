@@ -1,4 +1,5 @@
 interface Student {
+  id: number;
   name: string;
   gender: string;
   course: string;
@@ -9,6 +10,7 @@ interface Student {
 
 const TableDashboardData: Student[] = [
   {
+    id: 1,
     name: "Sokun Sonamheng",
     gender: "Male",
     course: "Java",
@@ -17,6 +19,7 @@ const TableDashboardData: Student[] = [
     avatar: "https://bit.ly/dan-abramov",
   },
   {
+    id: 2,
     name: "Sokun Sonita",
     gender: "Female",
     course: "Java",
@@ -25,6 +28,7 @@ const TableDashboardData: Student[] = [
     avatar: "https://bit.ly/dan-abramov",
   },
   {
+    id: 3,
     name: "Sokun Dalis",
     gender: "Female",
     course: "Python",
@@ -33,6 +37,7 @@ const TableDashboardData: Student[] = [
     avatar: "https://bit.ly/dan-abramov",
   },
   {
+    id: 4,
     name: "Sokun Dara",
     gender: "Male",
     course: "JavaScript",
@@ -41,6 +46,7 @@ const TableDashboardData: Student[] = [
     avatar: "https://bit.ly/dan-abramov",
   },
   {
+    id: 5,
     name: "Sokun Borey",
     gender: "Male",
     course: "C++",
@@ -49,6 +55,7 @@ const TableDashboardData: Student[] = [
     avatar: "https://bit.ly/dan-abramov",
   },
   {
+    id: 6,
     name: "Sokun Chantha",
     gender: "Female",
     course: "Java",
@@ -57,6 +64,7 @@ const TableDashboardData: Student[] = [
     avatar: "https://bit.ly/dan-abramov",
   },
   {
+    id: 7,
     name: "Sokun Khema",
     gender: "Female",
     course: "Python",
@@ -65,6 +73,7 @@ const TableDashboardData: Student[] = [
     avatar: "https://bit.ly/dan-abramov",
   },
   {
+    id: 8,
     name: "Sokun Veasna",
     gender: "Male",
     course: "JavaScript",
@@ -73,6 +82,7 @@ const TableDashboardData: Student[] = [
     avatar: "https://bit.ly/dan-abramov",
   },
   {
+    id: 9,
     name: "Sokun Sreynith",
     gender: "Female",
     course: "C++",
@@ -81,6 +91,7 @@ const TableDashboardData: Student[] = [
     avatar: "https://bit.ly/dan-abramov",
   },
   {
+    id: 10,
     name: "Sokun Sopheak",
     gender: "Male",
     course: "Java",
