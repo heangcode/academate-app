@@ -11,6 +11,7 @@ import Score from "./pages/Score";
 import Calendar from "./pages/Calendar";
 import Settings from "./pages/Settings";
 import StudentProfile from "./pages/StudentProfile";
+import AttendanceList from "./pages/AttendanceList";
 
 const App: React.FC = () => {
   return (
@@ -22,7 +23,9 @@ const App: React.FC = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/classes" element={<Classes />} />
         <Route path="/students" element={<Students />} />
-        <Route path="/attendance" element={<Attendance />} />
+        <Route path="/attendance" element={<Attendance />}>
+          <Route path="attendance-list" element={<AttendanceList />} />
+        </Route>
         <Route path="/score" element={<Score />} />
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/settings" element={<Settings />} />

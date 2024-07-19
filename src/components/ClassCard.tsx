@@ -18,6 +18,7 @@ interface ClassCardProps {
   time: string;
   date: string;
   status: string;
+  onClick?: () => void;
 }
 
 const ClassCard: React.FC<ClassCardProps> = ({
@@ -26,9 +27,11 @@ const ClassCard: React.FC<ClassCardProps> = ({
   time,
   date,
   status,
+  onClick,
 }) => {
   return (
     <Card
+      variant="outlined"
       sx={{
         width: "361px",
         borderRadius: "15px",
@@ -79,6 +82,7 @@ const ClassCard: React.FC<ClassCardProps> = ({
           />
           <Button
             variant="contained"
+            onClick={onClick}
             color="primary"
             sx={{
               color: "#fff",

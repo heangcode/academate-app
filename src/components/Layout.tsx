@@ -36,7 +36,7 @@ const Layout: React.FC<ILayout> = ({ children }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => location.pathname.startsWith(path);
 
   const getListItemStyles = (path: string) => ({
     bgcolor: isActive(path) ? "#e6f6fc" : "#fff",
@@ -49,7 +49,7 @@ const Layout: React.FC<ILayout> = ({ children }) => {
   });
 
   return (
-    <Box sx={{ display: "flex", height: "100vh" }}>
+    <Box sx={{ display: "flex", height: "100vh", overflow: "hidden" }}>
       {/* Sidebar */}
       <Box
         sx={{
@@ -173,8 +173,8 @@ const Layout: React.FC<ILayout> = ({ children }) => {
           display: "flex",
           flexDirection: "column",
           bgcolor: "#ebf7fb",
-          overflowY: "auto",
-          marginLeft: "250px", // To account for the fixed sidebar
+          overflow: "hidden",
+          marginLeft: "250px",
         }}
       >
         {/* Top Navbar */}
@@ -186,6 +186,9 @@ const Layout: React.FC<ILayout> = ({ children }) => {
             bgcolor: "#fff",
             p: 2,
             boxShadow: "0 1px 4px rgba(0, 0, 0, 0.1)",
+            position: "sticky",
+            top: 0,
+            zIndex: 1000,
           }}
         >
           <Box>
@@ -248,7 +251,7 @@ const Layout: React.FC<ILayout> = ({ children }) => {
           </Box>
         </Box>
         {/* Content */}
-        <Box sx={{ p: 3 }}>{children}</Box>
+        <Box sx={{ p: 3, overflowY: "auto", flexGrow: 1 }}>{children}</Box>
       </Box>
     </Box>
   );

@@ -11,7 +11,6 @@ import {
   Pagination,
 } from "@mui/material";
 import { Visibility as VisibilityIcon } from "@mui/icons-material";
-import { styled } from "@mui/system";
 
 interface Student {
   id: number;
@@ -26,23 +25,14 @@ interface Student {
 interface StudentTableProps {
   students: Student[];
   actions: string[];
+  onClickAttendance?: () => void;
 }
 
-const CustomPagination = styled(Pagination)(({ theme }) => ({
-  "& .MuiPaginationItem-root": {
-    borderRadius: "8px",
-    margin: theme.spacing(0.5),
-  },
-  "& .Mui-selected": {
-    backgroundColor: "#00A9E2",
-    color: "#fff",
-    "&:hover": {
-      backgroundColor: "#00A9E2",
-    },
-  },
-}));
-
-const StudentTable: React.FC<StudentTableProps> = ({ students, actions }) => {
+const StudentTable: React.FC<StudentTableProps> = ({
+  students,
+  actions,
+  onClickAttendance,
+}) => {
   const [page, setPage] = useState(1);
   const rowsPerPage = 5;
 
@@ -78,12 +68,23 @@ const StudentTable: React.FC<StudentTableProps> = ({ students, actions }) => {
                   <TableCell>{student.course}</TableCell>
                   <TableCell>{student.classroom}</TableCell>
                   <TableCell>{student.dob}</TableCell>
-                  <TableCell>{student.attendance}</TableCell>
+                  <TableCell onClick={onClickAttendance}>
+                    {actions.includes("attendance") && (
+                      <Button
+                        variant="outlined"
+                        color="primary"
+                        onClick={onClickAttendance}
+                        sx={{ border: "none", outline: "none" }}
+                      >
+                        {student.attendance}
+                      </Button>
+                    )}
+                  </TableCell>
                   {actions.length > 0 && (
                     <TableCell>
                       {actions.includes("view") && (
                         <Button
-                          variant="contained"
+                          variant="outlined"
                           sx={{
                             backgroundColor: "#C8E4FA",
                             color: "#007BFF",
@@ -125,9 +126,11 @@ const StudentTable: React.FC<StudentTableProps> = ({ students, actions }) => {
         </Table>
       </TableContainer>
       <Box display="flex" alignItems="center" justifyContent="end">
-        <CustomPagination
+        <Pagination
           count={Math.ceil(students.length / rowsPerPage)}
           page={page}
+          color="primary"
+          shape="rounded"
           onChange={handleChangePage}
           sx={{ mt: 2 }}
         />

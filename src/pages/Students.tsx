@@ -43,7 +43,7 @@ const Students: React.FC = () => {
 
   return (
     <Layout>
-      <Box sx={{ p: 3 }}>
+      <Box>
         <Typography
           variant="h4"
           color="#055D7A"
