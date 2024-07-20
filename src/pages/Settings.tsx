@@ -67,7 +67,7 @@ const Settings: React.FC = () => {
           <Grid item xs={12} sm={4} md={3}>
             <Avatar
               alt="Boran Pol"
-              src="/path/to/profile/image.jpg" // Replace with the actual image path
+              src="https://images.unsplash.com/photo-1523307730650-594bc63f9d67?q=80&w=1854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               sx={{ width: 150, height: 150 }}
             />
             <Typography variant="h6" fontWeight="bold" mt={2}>
@@ -85,51 +85,147 @@ const Settings: React.FC = () => {
             >
               <Grid container spacing={3}>
                 <Grid item xs={12} sm={6}>
+                  <Typography fontSize="18px" fontWeight="600" mb="20px">
+                    First Name <span style={{ color: "red" }}>*</span>
+                  </Typography>
                   <TextField
-                    label="First Name"
+                    placeholder="First Name"
                     variant="outlined"
                     required
                     fullWidth
+                    sx={{
+                      "& .MuiOutlinedInput-root": {
+                        borderRadius: "8px",
+
+                        "&:hover fieldset": {
+                          borderColor: "#D9D9D9",
+                        },
+                      },
+                      "& .MuiInputBase-input": {
+                        padding: "15px 26px",
+                      },
+                    }}
                   />
                 </Grid>
                 <Grid item xs={12} sm={6}>
+                  <Typography fontSize="18px" fontWeight="600" mb="20px">
+                    Last Name <span style={{ color: "red" }}>*</span>
+                  </Typography>
                   <TextField
-                    label="Last Name"
+                    placeholder="Last Name"
                     variant="outlined"
                     required
                     fullWidth
+                    sx={{
+                      "& .MuiOutlinedInput-root": {
+                        borderRadius: "8px",
+
+                        "&:hover fieldset": {
+                          borderColor: "#D9D9D9",
+                        },
+                      },
+                      "& .MuiInputBase-input": {
+                        padding: "15px 26px",
+                      },
+                    }}
                   />
                 </Grid>
                 <Grid item xs={12} sm={6}>
+                  <Typography fontSize="18px" fontWeight="600" mb="20px">
+                    Phone number
+                  </Typography>
                   <TextField
-                    label="Phone number"
+                    placeholder="Phone number"
                     variant="outlined"
                     fullWidth
+                    sx={{
+                      "& .MuiOutlinedInput-root": {
+                        borderRadius: "8px",
+
+                        "&:hover fieldset": {
+                          borderColor: "#D9D9D9",
+                        },
+                      },
+                      "& .MuiInputBase-input": {
+                        padding: "15px 26px",
+                      },
+                    }}
                   />
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                  <TextField label="Gender" variant="outlined" select fullWidth>
+                  <Typography fontSize="18px" fontWeight="600" mb="20px">
+                    Gender
+                  </Typography>
+                  <TextField
+                    placeholder="Select Gender"
+                    variant="outlined"
+                    select
+                    fullWidth
+                    sx={{
+                      "& .MuiOutlinedInput-root": {
+                        borderRadius: "8px",
+
+                        "&:hover fieldset": {
+                          borderColor: "#D9D9D9",
+                        },
+                      },
+                      "& .MuiInputBase-input": {
+                        padding: "15px 26px",
+                      },
+                    }}
+                  >
                     <MenuItem value="male">Male</MenuItem>
                     <MenuItem value="female">Female</MenuItem>
                     <MenuItem value="other">Other</MenuItem>
                   </TextField>
                 </Grid>
                 <Grid item xs={12}>
+                  <Typography fontSize="18px" fontWeight="600" mb="20px">
+                    Date of birth
+                  </Typography>
                   <TextField
-                    label="Date of birth"
+                    placeholder="Date of birth"
                     variant="outlined"
                     fullWidth
                     type="date"
                     InputLabelProps={{ shrink: true }}
+                    sx={{
+                      "& .MuiOutlinedInput-root": {
+                        borderRadius: "8px",
+
+                        "&:hover fieldset": {
+                          borderColor: "#D9D9D9",
+                        },
+                      },
+                      "& .MuiInputBase-input": {
+                        padding: "15px 26px",
+                      },
+                    }}
                   />
                 </Grid>
               </Grid>
-              <Button
-                variant="contained"
-                sx={{ alignSelf: "flex-start", bgcolor: "#3BB2D9", mt: 3 }}
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "flex-end",
+                }}
               >
-                Update
-              </Button>
+                <Button
+                  variant="contained"
+                  sx={{
+                    alignSelf: "flex-start",
+                    bgcolor: "#3BB2D9",
+                    mt: 3,
+                    color: "white",
+                    width: "279px",
+                    textTransform: "none",
+                  }}
+                  size="large"
+                >
+                  Update
+                </Button>
+              </Box>
             </Box>
           </Grid>
         </Grid>
