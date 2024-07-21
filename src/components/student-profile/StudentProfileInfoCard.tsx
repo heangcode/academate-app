@@ -8,7 +8,7 @@ import {
   Box,
 } from "@mui/material";
 
-interface InfoCardProps {
+interface StudentProfileInfoCardProps {
   title: string;
   total: number;
   attempted?: number;
@@ -18,7 +18,7 @@ interface InfoCardProps {
   missed?: number;
 }
 
-const InfoCard: React.FC<InfoCardProps> = ({
+const StudentProfileInfoCard: React.FC<StudentProfileInfoCardProps> = ({
   title,
   total,
   attempted,
@@ -109,4 +109,4 @@ const InfoCard: React.FC<InfoCardProps> = ({
   );
 };
 
-export default InfoCard;
+export { StudentProfileInfoCard };

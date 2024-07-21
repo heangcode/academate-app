@@ -5,7 +5,7 @@ interface Student {
   classroom: string;
   dob: string;
   attendance: string;
-  status: string; // Add this property
+  status: string;
 }
 
 export const students: Student[] = [

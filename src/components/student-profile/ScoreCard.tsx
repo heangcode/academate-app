@@ -42,4 +42,4 @@ const ScoreCard: React.FC<ScoreCardProps> = ({ title, score, details }) => {
   );
 };
 
-export default ScoreCard;
+export { ScoreCard };

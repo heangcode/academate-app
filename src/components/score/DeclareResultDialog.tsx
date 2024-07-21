@@ -18,7 +18,7 @@ import {
   Stack,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import DialogConfirmPublishResult from "./DialogConfirmPublishResult";
+import { DialogConfirmPublishResult } from "./DialogConfirmPublishResult";
 
 interface DeclareResultDialogProps {
   open: boolean;

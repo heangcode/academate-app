@@ -21,9 +21,9 @@ import {
   CalendarMonth,
   Close,
 } from "@mui/icons-material";
-import { AttendanceReportData } from "../data/AttendanceReportData";
-import { AttendanceReviewData } from "../data/AttendanceReviewData";
-import ExcelIcon from "./icons/ExcelIcon";
+import { AttendanceReportData } from "../../data/AttendanceReportData";
+import { AttendanceReviewData } from "../../data/AttendanceReviewData";
+import ExcelIcon from "../icons/ExcelIcon";
 
 interface AttendanceReportDialogProps {
   open: boolean;
@@ -643,4 +643,4 @@ const AttendanceReportDialog: React.FC<AttendanceReportDialogProps> = ({
   );
 };
 
-export default AttendanceReportDialog;
+export { AttendanceReportDialog };

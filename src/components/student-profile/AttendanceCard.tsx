@@ -77,4 +77,4 @@ const AttendanceCard: React.FC<AttendanceCardProps> = ({
   );
 };
 
-export default AttendanceCard;
+export { AttendanceCard };

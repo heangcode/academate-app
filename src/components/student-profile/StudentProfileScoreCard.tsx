@@ -109,4 +109,4 @@ const StudentProfileScoreCard: React.FC<StudentProfileScoreCardProps> = ({
   );
 };
 
-export default StudentProfileScoreCard;
+export { StudentProfileScoreCard };

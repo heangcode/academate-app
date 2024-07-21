@@ -9,11 +9,9 @@ import {
   Grid,
 } from "@mui/material";
 import Layout from "../components/Layout";
-import BatchCard from "../components/BatchCard";
-import ClassCard from "../components/ClassCard";
-import BatchDetailsDialog from "../components/BatchDetailsDialog";
 import { Add as AddIcon, Search as SearchIcon } from "@mui/icons-material";
 import { batches, classes } from "../data/ClassesData";
+import { BatchCard, BatchDetailsDialog, ClassCard } from "../components";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -161,4 +159,4 @@ const Classes: React.FC = () => {
   );
 };
 
-export default Classes;
+export { Classes };

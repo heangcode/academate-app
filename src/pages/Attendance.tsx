@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Box, Grid, InputBase, Tab, Tabs, Typography } from "@mui/material";
 import Layout from "../components/Layout";
 import { Search } from "@mui/icons-material";
-import ClassCard from "../components/ClassCard";
 import { classes } from "../data/ClassesData";
 import { Outlet, useNavigate, useLocation } from "react-router-dom";
+import { ClassCard } from "../components";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -124,4 +124,4 @@ const Attendance: React.FC = () => {
   );
 };
 
-export default Attendance;
+export { Attendance };

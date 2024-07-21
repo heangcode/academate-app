@@ -51,4 +51,4 @@ const DialogConfirmPublishResult: React.FC<DialogConfirmPublishResultProps> = ({
   );
 };
 
-export default DialogConfirmPublishResult;
+export { DialogConfirmPublishResult };

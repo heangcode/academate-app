@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Box, Button, Tab, Tabs, Typography } from "@mui/material";
 import Layout from "../components/Layout";
 import { FilterAlt, GetApp } from "@mui/icons-material";
-import ScoreTable from "../components/ScoreTable";
 import { ScoreTableData } from "../data/ScoreTableData";
+import { ScoreTable } from "../components";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -109,4 +109,4 @@ const Score: React.FC = () => {
   );
 };
 
-export default Score;
+export { Score };

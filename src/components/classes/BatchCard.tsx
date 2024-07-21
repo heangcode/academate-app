@@ -47,4 +47,4 @@ const BatchCard: React.FC<BatchCardProps> = ({
   );
 };
 
-export default BatchCard;
+export { BatchCard };

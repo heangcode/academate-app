@@ -5,12 +5,12 @@ import {
   GetApp as GetAppIcon,
 } from "@mui/icons-material";
 import Layout from "../components/Layout";
-import StudentTable from "../components/StudentTable";
 import {
   rejectedStudents,
   studentRequests,
   students,
 } from "../data/StudentsData";
+import { StudentTable } from "../components";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -113,4 +113,4 @@ const Students: React.FC = () => {
   );
 };
 
-export default Students;
+export { Students };

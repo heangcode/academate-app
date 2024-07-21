@@ -13,7 +13,7 @@ import {
   Box,
 } from "@mui/material";
 import { Phone as PhoneIcon, Email as EmailIcon } from "@mui/icons-material";
-import { TableDashboardData } from "../data/TableDashboardData";
+import { TableDashboardData } from "../../data/TableDashboardData";
 import { useNavigate } from "react-router-dom";
 
 const TableDashboard: React.FC = () => {
@@ -67,4 +67,4 @@ const TableDashboard: React.FC = () => {
   );
 };
 
-export default TableDashboard;
+export { TableDashboard };

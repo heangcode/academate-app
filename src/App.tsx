@@ -1,17 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import SignIn from "./components/SignIn";
-import ForgotPassword from "./components/ForgotPassword";
-import ResetPassword from "./components/ResetPassword";
-import Dashboard from "./pages/Dashboard";
-import Classes from "./pages/Classes";
-import Students from "./pages/Students";
-import Attendance from "./pages/Attendance";
-import Score from "./pages/Score";
-import Calendar from "./pages/Calendar";
-import Settings from "./pages/Settings";
-import StudentProfile from "./pages/StudentProfile";
-import AttendanceList from "./pages/AttendanceList";
+import { ForgotPassword, ResetPassword, SignIn } from "./components";
+import {
+  Attendance,
+  AttendanceList,
+  Calendar,
+  Classes,
+  Dashboard,
+  Score,
+  Settings,
+  StudentProfile,
+  Students,
+} from "./pages";
 
 const App: React.FC = () => {
   return (

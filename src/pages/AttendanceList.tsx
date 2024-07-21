@@ -1,9 +1,8 @@
 import { FilterAlt, GetApp } from "@mui/icons-material";
 import { Box, Button, Tab, Tabs, Typography } from "@mui/material";
 import React, { useState } from "react";
-import StudentTable from "../components/StudentTable";
-import AttendanceReportDialog from "../components/AttendanceReportDialog";
 import { students } from "../data/StudentsData";
+import { StudentTable, AttendanceReportDialog } from "../components";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -101,4 +100,4 @@ const AttendanceList = () => {
   );
 };
 
-export default AttendanceList;
+export { AttendanceList };

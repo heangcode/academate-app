@@ -161,4 +161,4 @@ const ScoreTable: React.FC<ScoreTableProps> = ({ students }) => {
   );
 };
 
-export default ScoreTable;
+export { ScoreTable };

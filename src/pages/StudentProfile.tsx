@@ -17,10 +17,12 @@ import { useNavigate, useParams } from "react-router-dom";
 import { TableDashboardData } from "../data/TableDashboardData";
 import { studentProfileData } from "../data/StudentProfileData";
 import { ArrowBack, Email, FilterAlt, Phone } from "@mui/icons-material";
-import ScoreCard from "../components/ScoreCard";
-import InfoCard from "../components/InfoCard";
-import AttendanceCard from "../components/AttendanceCard";
-import StudentProfileScoreCard from "../components/StudentProfileScoreCard";
+import {
+  AttendanceCard,
+  ScoreCard,
+  StudentProfileInfoCard,
+  StudentProfileScoreCard,
+} from "../components";
 
 const StudentProfile: React.FC = () => {
   const navigate = useNavigate();
@@ -198,13 +200,13 @@ const StudentProfile: React.FC = () => {
             </CardContent>
           </Card>
           <Box display="flex" justifyContent="space-between">
-            <InfoCard
+            <StudentProfileInfoCard
               title="Attendance"
               total={studentProfileData.attendance.total}
               passed={studentProfileData.attendance.attended}
               missed={studentProfileData.attendance.missed}
             />
-            <InfoCard
+            <StudentProfileInfoCard
               title="Quiz"
               total={studentProfileData.quiz.total}
               attempted={studentProfileData.quiz.attempted}
@@ -212,7 +214,7 @@ const StudentProfile: React.FC = () => {
               passed={studentProfileData.quiz.passed}
               failed={studentProfileData.quiz.failed}
             />
-            <InfoCard
+            <StudentProfileInfoCard
               title="Exams"
               total={studentProfileData.exams.total}
               attempted={studentProfileData.exams.attempted}
@@ -220,7 +222,7 @@ const StudentProfile: React.FC = () => {
               passed={studentProfileData.exams.passed}
               failed={studentProfileData.exams.failed}
             />
-            <InfoCard
+            <StudentProfileInfoCard
               title="Assignment"
               total={studentProfileData.assignments.total}
               attempted={studentProfileData.assignments.attempted}
@@ -361,4 +363,4 @@ const StudentProfile: React.FC = () => {
   );
 };
 
-export default StudentProfile;
+export { StudentProfile };

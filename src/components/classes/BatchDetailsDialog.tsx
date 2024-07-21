@@ -185,4 +185,4 @@ const BatchDetailsDialog: React.FC<BatchDetailsDialogProps> = ({
   );
 };
 
-export default BatchDetailsDialog;
+export { BatchDetailsDialog };
